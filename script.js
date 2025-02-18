@@ -8,6 +8,14 @@ input.addEventListener("input", function () {
   display.textContent = name;
 });
 
+// added to clear input and .display
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    input.value = "";
+    display.textContent = "";
+  }
+});
+
 // missing function?
 function simpleMath(a, b) {
   return a + b;
